@@ -1,6 +1,6 @@
 # todo-vue
 
-> A Vue.js project
+> Todo list made with Vue.js
 
 ## Build Setup
 
