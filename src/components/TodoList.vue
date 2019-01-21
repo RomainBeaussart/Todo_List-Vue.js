@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @RomainBeaussart Sign out
-4
-41 23 drehimself/todo-vue
- Code  Issues 0  Pull requests 1  Projects 0  Wiki  Insights
-todo-vue/src/components/TodoList.vue
-8132a5f  on 27 May 2018
-@drehimself drehimself push editing field
-     
-233 lines (207 sloc)  5.24 KB
 <template>
   <div>
     <input type="text" class="todo-input" placeholder="What needs to be done" v-model="newTodo" @keyup.enter="addTodo">
@@ -154,10 +137,13 @@ export default {
     padding: 10px 18px;
     font-size: 18px;
     margin-bottom: 16px;
+
     &:focus {
       outline: 0;
     }
+
   }
+  
   .todo-item {
     margin-bottom: 12px;
     display: flex;
@@ -165,38 +151,47 @@ export default {
     justify-content: space-between;
     animation-duration: 0.3s;
   }
+
   .remove-item {
     cursor: pointer;
     margin-left: 14px;
+
     &:hover {
       color: black;
     }
   }
-  .todo-item-left { // later
+
+  .todo-item-left {
     display: flex;
     align-items: center;
   }
+
   .todo-item-label {
     padding: 10px;
     border: 1px solid white;
     margin-left: 12px;
   }
+
   .todo-item-edit {
     font-size: 24px;
     color: #2c3e50;
     margin-left: 12px;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; //override defaults
+    border: 1px solid #ccc;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
     &:focus {
       outline: none;
     }
+
   }
+
   .completed {
     text-decoration: line-through;
     color: grey;
   }
+
   .extra-container {
     display: flex;
     align-items: center;
@@ -206,24 +201,34 @@ export default {
     padding-top: 14px;
     margin-bottom: 14px;
   }
+
   button {
     font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 5px;
     background-color: white;
     appearance: none;
+
     &:hover {
-      background: lightgreen;
+      background: #2ecc71;
+      color:#FFF;
     }
+
     &:focus {
       outline: none;
     }
+
   }
+
   .active {
-    background: lightgreen;
+    background: #2ecc71;
+    color: #FFF;
   }
-  // CSS Transitions
+
   .fade-enter-active, .fade-leave-active {
     transition: opacity .2s;
   }
+
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
